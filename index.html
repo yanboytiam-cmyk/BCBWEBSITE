@@ -396,7 +396,6 @@
       border: none;
       cursor: pointer;
       transition: all .3s ease;
-      will-change: transform, box-shadow;
       letter-spacing: .03em;
       min-height: 44px
     }
@@ -424,6 +423,7 @@
       animation: shimmer .7s ease-in-out
     }
 
+    .btn-a:hover, .btn-b:hover { will-change: transform, box-shadow; }
     .btn-a:hover {
       box-shadow: 0 0 44px rgba(var(--aRGB), .6);
       transform: translateY(-2px)
@@ -567,6 +567,7 @@
       background-position: 200% center;
       transition: all .35s ease, background-position .6s ease
     }
+    .btn-a:hover, .btn-b:hover { will-change: transform, box-shadow; }
     .btn-a:hover {
       background-position: -200% center
     }
@@ -3471,6 +3472,10 @@
     img[data-src] { opacity: 0; }
     img.li { animation: imgFadeIn .4s ease forwards; }
     @keyframes imgFadeIn { to { opacity: 1; } }
+
+    /* Pause orbit + marquee when section leaves viewport — set by IntersectionObserver */
+    #trans.anim-paused .oi-wrap { animation-play-state: paused !important; }
+    .marquee-wrapper.anim-paused .marquee-track { animation-play-state: paused !important; }
 </style>
 
     <!-- Schema.org: VideoObject (hero background) -->
@@ -3795,7 +3800,7 @@
     <section id="team" aria-labelledby="team-heading" class="glass-section">
       <div class="ti">
         <div class="tiw reveal reveal-left">
-          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_23.jpeg" alt="Caroline Bonu, Nurse Practitioner specializing in Psychiatry"
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_23.jpeg" alt="Caroline Bonu, Nurse Practitioner specializing in Psychiatry"
              width="520" height="520" style="object-position: top;">
           <div class="tbadge">10+ Years<span>Clinical Experience</span></div>
         </div>
@@ -4102,25 +4107,25 @@
       </div>
       <div class="bg2">
         <article class="bc reveal" onclick="goTo('#faq')">
-          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_40.jpeg" alt="Person managing anxiety and worry in Washington DC"
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_40.jpeg" alt="Person managing anxiety and worry in Washington DC"
               ></div>
           <div class="bb"><span class="btag">Anxiety</span>
             <h3>Understanding Anxiety: When Worry Becomes Overwhelming</h3>
             <p>Anxiety is more than occasional nerves. Learn to recognize when it's time to seek professional support �
               and what treatment really looks like.</p>
             <div class="bm">April 3, 2026 � 5 min read</div>
-          </div>`n        </article>
+          </div>        </article>
         <article class="bc reveal" data-d="1" onclick="goTo('#faq')">
-          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_41.jpeg" alt="Psychiatric medication and mental health treatment options"
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_41.jpeg" alt="Psychiatric medication and mental health treatment options"
               ></div>
           <div class="bb"><span class="btag">Treatment</span>
             <h3>The Role of Medication in Mental Health Treatment</h3>
             <p>Psychiatric medication is not weakness � it's a tool. Here's what you should know about how medication
               works in a comprehensive care plan.</p>
             <div class="bm">March 18, 2026 � 7 min read</div>
-          </div>`n        </article>
+          </div>        </article>
         <article class="bc reveal" data-d="2" onclick="goTo('#faq')">
-          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_42.jpeg" alt="Person building resilience and mental wellness coping strategies" ></div>
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_42.jpeg" alt="Person building resilience and mental wellness coping strategies" ></div>
           <div class="bb"><span class="btag">Wellness</span>
             <h3>Building Resilience: Coping Strategies for Everyday Life</h3>
             <p>Resilience isn't something you're born with � it's built. Discover evidence-based strategies to help you
@@ -4365,7 +4370,7 @@
       function init() { s.length = 0; for (let i = 0; i < count; i++)s.push({ x: Math.random() * cv.width, y: Math.random() * cv.height, r: Math.random() * 1.2 + .3, o: Math.random() * .45 + .15, dx: (Math.random() - .5) * .03, dy: (Math.random() - .5) * .015, ts: Math.random() * .0008 + .0003, tp: Math.random() * Math.PI * 2 }) }
       function draw() { if (paused || window.scrollY > window.innerHeight) { requestAnimationFrame(draw); return } cx.clearRect(0, 0, cv.width, cv.height); const t = Date.now(); s.forEach(p => { p.x += p.dx; p.y += p.dy; if (p.x < 0) p.x = cv.width; if (p.x > cv.width) p.x = 0; if (p.y < 0) p.y = cv.height; if (p.y > cv.height) p.y = 0; const op = Math.max(0, p.o + Math.sin(t * p.ts + p.tp) * .18); cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, Math.PI * 2); cx.fillStyle = `rgba(200,123,90,${op})`; cx.fill() }); requestAnimationFrame(draw) }
       rsz(); init(); draw();
-      window.addEventListener('resize', () => { rsz(); init() });
+      let _rzT; window.addEventListener('resize', () => { clearTimeout(_rzT); _rzT = setTimeout(() => { rsz(); init() }, 250) });
       document.addEventListener('visibilitychange', () => { paused = document.hidden });
     })();
 
@@ -4408,8 +4413,9 @@
     /* ------------------------------------------
        HERO LINKS
     ------------------------------------------ */
-    document.querySelectorAll('.hsl').forEach(el => {
-      el.addEventListener('click', () => { document.querySelectorAll('.hsl').forEach(x => x.classList.remove('on')); el.classList.add('on') });
+    const _hslEls = document.querySelectorAll('.hsl');
+    _hslEls.forEach(el => {
+      el.addEventListener('click', () => { _hslEls.forEach(x => x.classList.remove('on')); el.classList.add('on') });
     });
     function goTo(sel) { const el = document.querySelector(sel); if (el) el.scrollIntoView({ behavior: 'smooth' }) }
 
@@ -4723,7 +4729,7 @@
     <a href="https://www.psychologytoday.com/us/psychiatrists/bcb-liberty-healthcare-washington-dc/1036928"
       target="_blank" rel="noopener" class="sx-verified-seal"></a>
   </div>
-  <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13"
+  <script defer type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13"
     data-id="1036928"
     data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS91cy9wc3ljaGlhdHJpc3RzL2JjYi1saWJlcnR5LWhlYWx0aGNhcmUtd2FzaGluZ3Rvbi1kYy8xMDM2OTI4"></script>
 
@@ -4749,7 +4755,22 @@
       }
     })();
   </script>
+
+  <script>
+    (function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          e.target.classList.toggle('anim-paused', !e.isIntersecting);
+        });
+      }, { rootMargin: '100px 0px' });
+      var trans = document.getElementById('trans');
+      var mw = document.querySelector('.marquee-wrapper');
+      if (trans) io.observe(trans);
+      if (mw) io.observe(mw);
+    })();
+  </script>
 </body>
 
 </html>
+
 
