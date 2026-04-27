@@ -3466,7 +3466,12 @@
             object-fit: cover;
         }
     }
-  </style>
+  
+    /* lazy-image fade-in */
+    img[data-src] { opacity: 0; }
+    img.li { animation: imgFadeIn .4s ease forwards; }
+    @keyframes imgFadeIn { to { opacity: 1; } }
+</style>
 
     <!-- Schema.org: VideoObject (hero background) -->
     <script type="application/ld+json">
@@ -3790,8 +3795,8 @@
     <section id="team" aria-labelledby="team-heading" class="glass-section">
       <div class="ti">
         <div class="tiw reveal reveal-left">
-          <img src="img_23.jpeg" alt="Caroline Bonu, Nurse Practitioner specializing in Psychiatry"
-            loading="lazy" width="520" height="520" style="object-position: top;">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_23.jpeg" alt="Caroline Bonu, Nurse Practitioner specializing in Psychiatry"
+             width="520" height="520" style="object-position: top;">
           <div class="tbadge">10+ Years<span>Clinical Experience</span></div>
         </div>
         <div class="reveal" data-d="1">
@@ -3860,7 +3865,7 @@
             <p class="txt">"I was terrified to seek psychiatric help for the first time. Ms. Bonu made me feel
               completely at ease. She genuinely listens � and for the first time in years, I feel like myself again."
             </p>
-            <div class="ta"><img src="img_24.png" class="av" alt="Sarah M.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_24.png" class="av" alt="Sarah M.">
               <div><span class="an2">Sarah M.</span><span class="ar">Washington, DC � Anxiety</span></div>
             </div>
           </div>
@@ -3868,7 +3873,7 @@
             <div class="ts">?????</div>
             <p class="txt">"The medication management program changed my life. I struggled with bipolar disorder for
               years without proper care. The stability I have now is something I never believed was possible."</p>
-            <div class="ta"><img src="img_25.png" class="av" alt="James R.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_25.png" class="av" alt="James R.">
               <div><span class="an2">James R.</span><span class="ar">Silver Spring, MD � Bipolar</span></div>
             </div>
           </div>
@@ -3877,7 +3882,7 @@
             <p class="txt">"As a working mom managing PTSD, I needed flexible, compassionate support. BCB Liberty
               delivered. The follow-up visits are what set them apart � they actually track your progress and adjust."
             </p>
-            <div class="ta"><img src="img_26.png" class="av" alt="Tasha W.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_26.png" class="av" alt="Tasha W.">
               <div><span class="an2">Tasha W.</span><span class="ar">Washington, DC � PTSD</span></div>
             </div>
           </div>
@@ -3885,7 +3890,7 @@
             <div class="ts">?????</div>
             <p class="txt">"My teenage son was diagnosed with ADHD and we didn't know where to turn. Ms. Bonu's approach
               with adolescents is truly exceptional � patient, thorough, and genuinely invested in his success."</p>
-            <div class="ta"><img src="img_27.png" class="av" alt="Maria L.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_27.png" class="av" alt="Maria L.">
               <div><span class="an2">Maria L.</span><span class="ar">Bethesda, MD � ADHD</span></div>
             </div>
           </div>
@@ -3895,7 +3900,7 @@
             <p class="txt">"I was terrified to seek psychiatric help for the first time. Ms. Bonu made me feel
               completely at ease. She genuinely listens � and for the first time in years, I feel like myself again."
             </p>
-            <div class="ta"><img src="img_28.png" class="av" alt="Sarah M.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_28.png" class="av" alt="Sarah M.">
               <div><span class="an2">Sarah M.</span><span class="ar">Washington, DC � Anxiety</span></div>
             </div>
           </div>
@@ -3903,7 +3908,7 @@
             <div class="ts">?????</div>
             <p class="txt">"The medication management program changed my life. I struggled with bipolar disorder for
               years without proper care. The stability I have now is something I never believed was possible."</p>
-            <div class="ta"><img src="img_29.png" class="av" alt="James R.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_29.png" class="av" alt="James R.">
               <div><span class="an2">James R.</span><span class="ar">Silver Spring, MD � Bipolar</span></div>
             </div>
           </div>
@@ -3912,7 +3917,7 @@
             <p class="txt">"As a working mom managing PTSD, I needed flexible, compassionate support. BCB Liberty
               delivered. The follow-up visits are what set them apart � they actually track your progress and adjust."
             </p>
-            <div class="ta"><img src="img_30.png" class="av" alt="Tasha W.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_30.png" class="av" alt="Tasha W.">
               <div><span class="an2">Tasha W.</span><span class="ar">Washington, DC � PTSD</span></div>
             </div>
           </div>
@@ -3920,7 +3925,7 @@
             <div class="ts">?????</div>
             <p class="txt">"My teenage son was diagnosed with ADHD and we didn't know where to turn. Ms. Bonu's approach
               with adolescents is truly exceptional � patient, thorough, and genuinely invested in his success."</p>
-            <div class="ta"><img src="img_31.png" class="av" alt="Maria L.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_31.png" class="av" alt="Maria L.">
               <div><span class="an2">Maria L.</span><span class="ar">Bethesda, MD � ADHD</span></div>
             </div>
           </div>
@@ -3931,7 +3936,7 @@
             <div class="ts">?????</div>
             <p class="txt">"Finding a provider who understands my cultural background made all the difference. I felt
               seen, heard, and respected from day one. I highly recommend BCB Liberty."</p>
-            <div class="ta"><img src="img_32.png" class="av" alt="Chloe D.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_32.png" class="av" alt="Chloe D.">
               <div><span class="an2">Chloe D.</span><span class="ar">College Park, MD</span></div>
             </div>
           </div>
@@ -3939,7 +3944,7 @@
             <div class="ts">?????</div>
             <p class="txt">"The telemedicine option is incredibly convenient. I don't have to miss work to get the care
               I need, and the video calls are just as thorough as being there in person."</p>
-            <div class="ta"><img src="img_33.png" class="av" alt="Marcus T.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_33.png" class="av" alt="Marcus T.">
               <div><span class="an2">Marcus T.</span><span class="ar">Washington, DC</span></div>
             </div>
           </div>
@@ -3947,7 +3952,7 @@
             <div class="ts">?????</div>
             <p class="txt">"After struggling with postpartum depression, this team provided a true lifeline. Their
               empathy and expertise helped me navigate the hardest months of my life safely."</p>
-            <div class="ta"><img src="img_34.png" class="av" alt="Elena V.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_34.png" class="av" alt="Elena V.">
               <div><span class="an2">Elena V.</span><span class="ar">Alexandria, VA</span></div>
             </div>
           </div>
@@ -3955,7 +3960,7 @@
             <div class="ts">?????</div>
             <p class="txt">"Professional, discreet, and deeply compassionate. Every session is productive and leaves me
               feeling grounded and equipped to tackle the week ahead."</p>
-            <div class="ta"><img src="img_35.png" class="av" alt="David S.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_35.png" class="av" alt="David S.">
               <div><span class="an2">David S.</span><span class="ar">Rockville, MD</span></div>
             </div>
           </div>
@@ -3964,7 +3969,7 @@
             <div class="ts">?????</div>
             <p class="txt">"Finding a provider who understands my cultural background made all the difference. I felt
               seen, heard, and respected from day one. I highly recommend BCB Liberty."</p>
-            <div class="ta"><img src="img_36.png" class="av" alt="Chloe D.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_36.png" class="av" alt="Chloe D.">
               <div><span class="an2">Chloe D.</span><span class="ar">College Park, MD</span></div>
             </div>
           </div>
@@ -3972,7 +3977,7 @@
             <div class="ts">?????</div>
             <p class="txt">"The telemedicine option is incredibly convenient. I don't have to miss work to get the care
               I need, and the video calls are just as thorough as being there in person."</p>
-            <div class="ta"><img src="img_37.png" class="av" alt="Marcus T.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_37.png" class="av" alt="Marcus T.">
               <div><span class="an2">Marcus T.</span><span class="ar">Washington, DC</span></div>
             </div>
           </div>
@@ -3980,7 +3985,7 @@
             <div class="ts">?????</div>
             <p class="txt">"After struggling with postpartum depression, this team provided a true lifeline. Their
               empathy and expertise helped me navigate the hardest months of my life safely."</p>
-            <div class="ta"><img src="img_38.png" class="av" alt="Elena V.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_38.png" class="av" alt="Elena V.">
               <div><span class="an2">Elena V.</span><span class="ar">Alexandria, VA</span></div>
             </div>
           </div>
@@ -3988,7 +3993,7 @@
             <div class="ts">?????</div>
             <p class="txt">"Professional, discreet, and deeply compassionate. Every session is productive and leaves me
               feeling grounded and equipped to tackle the week ahead."</p>
-            <div class="ta"><img src="img_39.png" class="av" alt="David S.">
+            <div class="ta"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_39.png" class="av" alt="David S.">
               <div><span class="an2">David S.</span><span class="ar">Rockville, MD</span></div>
             </div>
           </div>
@@ -4097,8 +4102,8 @@
       </div>
       <div class="bg2">
         <article class="bc reveal" onclick="goTo('#faq')">
-          <div class="bim"><img src="img_40.jpeg" alt="Person managing anxiety and worry in Washington DC"
-              loading="lazy"></div>
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_40.jpeg" alt="Person managing anxiety and worry in Washington DC"
+              ></div>
           <div class="bb"><span class="btag">Anxiety</span>
             <h3>Understanding Anxiety: When Worry Becomes Overwhelming</h3>
             <p>Anxiety is more than occasional nerves. Learn to recognize when it's time to seek professional support �
@@ -4106,8 +4111,8 @@
             <div class="bm">April 3, 2026 � 5 min read</div>
           </div>`n        </article>
         <article class="bc reveal" data-d="1" onclick="goTo('#faq')">
-          <div class="bim"><img src="img_41.jpeg" alt="Psychiatric medication and mental health treatment options"
-              loading="lazy"></div>
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_41.jpeg" alt="Psychiatric medication and mental health treatment options"
+              ></div>
           <div class="bb"><span class="btag">Treatment</span>
             <h3>The Role of Medication in Mental Health Treatment</h3>
             <p>Psychiatric medication is not weakness � it's a tool. Here's what you should know about how medication
@@ -4115,7 +4120,7 @@
             <div class="bm">March 18, 2026 � 7 min read</div>
           </div>`n        </article>
         <article class="bc reveal" data-d="2" onclick="goTo('#faq')">
-          <div class="bim"><img src="img_42.jpeg" alt="Person building resilience and mental wellness coping strategies" loading="lazy"></div>
+          <div class="bim"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_42.jpeg" alt="Person building resilience and mental wellness coping strategies" ></div>
           <div class="bb"><span class="btag">Wellness</span>
             <h3>Building Resilience: Coping Strategies for Everyday Life</h3>
             <p>Resilience isn't something you're born with � it's built. Discover evidence-based strategies to help you
@@ -4260,7 +4265,7 @@
       <div class="fi">
         <div class="ft">
           <div class="fbl">
-            <img src="img_43.png" alt="BCB Liberty">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_43.png" alt="BCB Liberty">
             <div class="fbn">BCB Liberty</div>
             <div class="fbs">Healthcare</div>
             <p>Compassionate psychiatric care in Washington DC &amp; Maryland. Founded by Caroline Bonu, NP � dedicated
@@ -4288,7 +4293,7 @@
         </div>
         <div class="fb2">
           <p class="fc">� 2026 BCB Liberty Healthcare. All rights reserved. | <a href="/privacy-policy" style="color:var(--t2);text-decoration:underline">Privacy Policy</a> | <a href="/hipaa-notice" style="color:var(--t2);text-decoration:underline">HIPAA Notice</a></p>
-          <img src="img_44.png" alt="HIPAA Compliant" class="himg">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_44.png" alt="HIPAA Compliant" class="himg">
         </div>
       </div>
     </footer>
@@ -4302,7 +4307,7 @@
     <div class="mbg" onclick="closeM()"></div>
     <div class="mbox">
       <button class="mclose" onclick="closeM()" aria-label="Close dialog">�</button>
-      <img src="img_45.png" alt="BCB Liberty" class="mlogo">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img_45.png" alt="BCB Liberty" class="mlogo">
       <h2>Book an Appointment</h2>
       <p class="msub">Fill out the form below and our team will reach out within 24 hours to confirm your appointment.
       </p>
@@ -4721,6 +4726,29 @@
   <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13"
     data-id="1036928"
     data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS91cy9wc3ljaGlhdHJpc3RzL2JjYi1saWJlcnR5LWhlYWx0aGNhcmUtd2FzaGluZ3Rvbi1kYy8xMDM2OTI4"></script>
+
+  <script>
+    (function () {
+      var placeholder = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+      function loadImg(img) {
+        var src = img.getAttribute('data-src');
+        if (!src) return;
+        img.src = src;
+        img.removeAttribute('data-src');
+        img.classList.add('li');
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { loadImg(e.target); io.unobserve(e.target); }
+          });
+        }, { rootMargin: '300px 0px' });
+        document.querySelectorAll('img[data-src]').forEach(function (img) { io.observe(img); });
+      } else {
+        document.querySelectorAll('img[data-src]').forEach(loadImg);
+      }
+    })();
+  </script>
 </body>
 
 </html>
